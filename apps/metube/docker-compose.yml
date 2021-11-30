@@ -1,0 +1,11 @@
+services:
+  metube:
+    image: alexta69/metube
+    container_name: metube
+    restart: unless-stopped
+    stop_grace_period: 1m
+    user: "1001:1001"
+    ports:
+      - "8081:8081"
+    volumes:
+      - ${APP_DATA_DIR}/downloads:/downloads
