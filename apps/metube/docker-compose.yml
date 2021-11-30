@@ -4,8 +4,10 @@ services:
     container_name: metube
     restart: unless-stopped
     stop_grace_period: 1m
-    user: "1001:1001"
+    user: "1000:1000"
     ports:
       - "8081:8081"
     volumes:
-      - ${APP_DATA_DIR}/downloads:/downloads
+      - ${APP_DATA_DIR}/data:/data
+    environment:
+      DOWNLOAD_DIR: "/data"
