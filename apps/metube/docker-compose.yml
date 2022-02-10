@@ -8,6 +8,4 @@ services:
     ports:
       - "8081:8081"
     volumes:
-      - ${APP_DATA_DIR}/data:/data
-    environment:
-      DOWNLOAD_DIR: "/data"
+      - ${APP_DATA_DIR}/data:/downloads
